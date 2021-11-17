@@ -23,14 +23,17 @@ function y = Lk(x,k)
     y = p / pk
 endfunction
 
-// La función que calcule el polinomio interpolador de Lagrange
+// La función que calcula el polinomio interpolador de Lagrange
 
 // Input: 
 // x = el vector [x0, x1, x2, .... xn], donde xi (i = 0...n) - los puntos por cuales pasa el polinomio 
 // y - el vector tal que f(xi) = yi
+
+// Output: 
+// z - polinomio de interpolación 
  
-function z = interpolLagrange(x,y)
-    [Xn, Xm] = size(x)
+function z = interpolLagrange(x,y) 
+    Xm = length(x) 
     pol = 0
     for k = 1:Xm
         pol = pol + (Lk(x,k) * y(k))
@@ -38,11 +41,10 @@ function z = interpolLagrange(x,y)
     z = pol
 endfunction
 
-// Ejemplos 
-
-//x1 = [0, 1, 2]
-//y1 = [-1, -1, 7]
-
+//Vimos en clase que la cota del error que se calcula acá 
+// difiere del valor calculado
+// porque en (1) hacemos calclo con truncamiento 
+// y en (2) hacemos analisis con los valores reales 
 
 ////
 
@@ -114,13 +116,13 @@ disp(er4)
 
 // El método de Newton 
 
+
 // Diferencias divididas
 
-// TODO: Reescribir esta función de manera eficiente
 
 function dd = diferencias_divididas(f, x)
     
-    [m,n] = size(x)
+    n = length(x)
     
     if n == 2 then
         

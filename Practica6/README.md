@@ -1,2 +1,2 @@
-## Práctica 6: Aproximación de autovalores. ##
+## Práctica 6: Aproximación de autovalores ##
 

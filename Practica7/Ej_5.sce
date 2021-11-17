@@ -7,7 +7,7 @@ clear
 
 // El método de Lagrange 
 
-// La función que calcule Lk
+// La función que calcula Lk
 // para el polinomio interpolador de Lagrange
 
 // Input: 
@@ -26,7 +26,7 @@ function y = Lk(x,k)
     y = p / pk
 endfunction
 
-// La función que calcule el polinomio interpolador de Lagrange
+// La función que calcula el polinomio interpolador de Lagrange
 
 // Input: 
 // x = el vector [x0, x1, x2, .... xn], donde xi (i = 0...n) - los puntos por cuales pasa el polinomio 
